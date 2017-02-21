@@ -9,7 +9,6 @@
         <div class="hpiilo">
                 <?php
                     $the_query = new WP_Query( array( 'tag_id' => 8 ) );
-
                     if ( $the_query->have_posts() ) {
                         echo '<ul>';
                         while ( $the_query->have_posts() ) {
