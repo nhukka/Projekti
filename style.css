@@ -1,0 +1,168 @@
+/*
+Theme Name: Katukuva
+Theme URI: http://users.metropolia.fi
+Author: Nimi
+Author URI: https://metropolia.fi/
+Description: Teeman teon opiskelua
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blue
+Text Domain: Katukuva
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+body{
+    background-attachment: fixed;
+    background-image: url("../katukuva/img/tausta1.jpg");
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+}
+
+
+
+
+.container{
+ position:relative;
+    margin: 0 auto;
+    width: 100%;
+    height:auto !important;
+    padding: 0;
+    
+}
+
+.main-header{
+    background-color: #000;
+    padding: 1em;
+    width: 100% !important;
+    opacity: 0.50;
+    
+    
+}
+
+.main-header ul {margin: 0; padding: 0; 
+	list-style-type: none; list-style-image: none; }
+
+.main-header li {display: inline;
+            padding: 0 1em 1em 1em;
+            
+}
+
+.main-header ul li a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.main-header ul li a:hover{
+    text-decoration: none;
+    color: #C4C4C4;
+}
+
+.content-row{
+    float: left;
+    width: 100%
+}
+
+.content-row img{
+    display:block;
+    margin: auto;
+}
+
+.kaupungit{
+    margin-top: 3em;
+}
+
+/* isot tekstit */
+.hel{
+    font-size: 250px;
+    color: #FFF;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    line-height: 0.8em;
+}
+
+.helback{
+     color: #E58195;
+}
+
+.hpiilo{
+    display: none;
+    color: #FFF;
+    background-color: #000;
+    height: 600px;
+}
+
+.hpiilo ul{
+    display: flex;
+    list-style-type: none; 
+    overflow: hidden;
+    
+   
+}
+
+.hpiilo ul li img{
+    max-height: 400px;
+    margin: 6em 1em 1em 1em;
+}
+
+.esp{
+    font-size: 250px;
+    color: #FFF;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    line-height: 0.8em;
+}
+
+.espback{
+    color: #FAC296;
+}
+.epiilo{
+    display: none;
+    color: #FFF;
+    background-color: #000;
+    height: 600px;
+}
+.van{
+    font-size: 250px;
+    color: #FFF;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    line-height: 0.8em;
+}
+.vanback{
+    color: #89FFD4;
+}
+
+.vpiilo{
+    display: none;
+    color: #FFF;
+    background-color: #000;
+    height: 600px;
+}
+
+
+#map{
+    height: 300px;
+    width: 80%;
+}
+.footer{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    color: #FFF;
+    background-color: #000;
+    text-align: center;
+    padding: 1em;
+    margin-top:1em;
+    opacity: 0.50;
+}
