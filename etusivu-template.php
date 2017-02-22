@@ -1,7 +1,7 @@
 <?php /* Template Name: etusivu-template */ ?>
 <?php get_header(); ?>
 <div class="content-row">
-    <img src="http://localhost/wordpress/wp-content/themes/katukuva/img/LogoKK_pieni.png">
+    <img src="http://localhost/wordpress/wp-content/themes/Projekti/img/LogoKK_pieni.png">
    
     <div class="kaupungit">
         

@@ -1,5 +1,5 @@
 /*
-Theme Name: Katukuva
+Theme Name: Projekti
 Theme URI: http://users.metropolia.fi
 Author: Nimi
 Author URI: https://metropolia.fi/
@@ -16,7 +16,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 body{
     background-attachment: fixed;
-    background-image: url("../katukuva/img/tausta1.jpg");
+    background-image: url("../Projekti/img/tausta1.jpg");
     margin: 0;
     padding: 0;
     height: 100%;
