@@ -25,4 +25,24 @@ jQuery(function() {
                 jQuery(".hel").removeClass('helback');
            
     });
-});
+    
+
+
+    jQuery('#moveleft').click(function() {
+        jQuery('.hpiilo ul').animate({
+        'marginLeft' : "-=60px" //moves left
+        });
+    });
+    jQuery('#moveright').click(function() {
+        jQuery('.hpiilo ul').animate({
+        'marginLeft' : "+=60px" //moves right
+        });
+    });
+    
+    });
+
+
+
+
+    
+   

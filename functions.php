@@ -40,4 +40,6 @@ add_action('wp_enqueue_scripts', 'lisaa_kirjasto');
 
 // function add_tags_for_attachments() {     register_taxonomy_for_object_type( 'post_tag', 'attachment' ); } add_action( 'init' , 'add_tags_for_attachments' );
 
+
+
 ?>

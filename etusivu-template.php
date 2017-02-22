@@ -3,10 +3,12 @@
 <div class="content-row">
     <img src="http://localhost/wordpress/wp-content/themes/Projekti/img/LogoKK_pieni.png">
    
+    
     <div class="kaupungit">
         
         <h1 class="hel">HELSINKI</h1>
         <div class="hpiilo">
+            <button id="moveleft">Move Left</button>  <button id="moveright">Move right</button>
                 <?php
                     $the_query = new WP_Query( array( 'tag_id' => 8 ) );
                     if ( $the_query->have_posts() ) {
@@ -22,6 +24,7 @@
                     /* Restore original Post Data */
                     wp_reset_postdata();
                 ?>
+            
         </div>
         <h1 class="esp">ESPOO</h1>
         <div class="epiilo">

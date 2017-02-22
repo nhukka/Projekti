@@ -77,6 +77,8 @@ body{
 }
 
 /* isot tekstit */
+
+
 .hel{
     font-size: 250px;
     color: #FFF;
@@ -101,6 +103,7 @@ body{
     display: flex;
     list-style-type: none; 
     overflow: hidden;
+    position: relative;
     
    
 }
