@@ -30,12 +30,12 @@ jQuery(function() {
 
     jQuery('#moveleft').click(function() {
         jQuery('.hpiilo ul').animate({
-        'marginLeft' : "-=60px" //moves left
+        'marginLeft' : "-=250px" //moves left
         });
     });
     jQuery('#moveright').click(function() {
         jQuery('.hpiilo ul').animate({
-        'marginLeft' : "+=60px" //moves right
+        'marginLeft' : "+=250px" //moves right
         });
     });
     

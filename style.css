@@ -78,7 +78,9 @@ body{
 
 /* isot tekstit */
 
-
+#moveright{
+    float:right;
+}
 .hel{
     font-size: 250px;
     color: #FFF;
