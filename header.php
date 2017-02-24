@@ -18,6 +18,7 @@
 
 <div class="container">
 <header class="main-header"> 
+    <!-- menu valikko ylhäällä-->
 <?php 
     wp_nav_menu(array('container'=> 'navmenu', 'conatiner_class'=> 'navmenu'));
     

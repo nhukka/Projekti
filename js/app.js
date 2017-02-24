@@ -1,5 +1,7 @@
 jQuery(function() {
     
+    //klikkaamalla helsinkiä sen väri vaihtuu ja aukee se n alle se slideri ja koodit kans sulkee muut jos painaa toista kaupunkia.
+    
     jQuery(".hel").on("click", function() {
         jQuery(this).toggleClass('helback');
         jQuery(".hpiilo").slideToggle("400");
@@ -30,12 +32,12 @@ jQuery(function() {
 
     jQuery('#moveleft').click(function() {
         jQuery('.hpiilo ul').animate({
-        'marginLeft' : "-=250px" //moves left
+        'marginLeft' : "-=250px" //liikuttaa diviä vasemmalle
         });
     });
     jQuery('#moveright').click(function() {
         jQuery('.hpiilo ul').animate({
-        'marginLeft' : "+=250px" //moves right
+        'marginLeft' : "+=250px" //liikuttaa diviä oikeelle
         });
     });
     
