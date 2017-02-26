@@ -78,9 +78,66 @@ body{
 
 /* isot tekstit */
 
-#moveright{
-    float:right;
+
+.oikealle{
+    float: right;
+    margin-top: 10em;
+    margin-right: 5em;
+    top: -70px;
+    left: 0;
+    right: 0;
+    width: 137px;
+    height: 137px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-right: 10px solid #FFF;
+    border-top: 10px solid #FFF;
+    border-bottom: transparent;
+    border-left: transparent;
+    background-color: transparent;
+    
+ 
 }
+
+.oikealle:hover{
+border-right: 10px solid #C4C4C4;
+    border-top: 10px solid #C4C4C4;
+    background: transparent;
+}
+
+.vasemmalle{
+    float: left;
+    margin-top: 10em;
+    margin-left: 5em;
+    top: -70px;
+    left: 0;
+    right: 0;
+    width: 137px;
+    height: 137px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-bottom: 10px solid #FFF;
+    border-left: 10px solid #FFF;
+    border-right: transparent;
+    border-top: transparent;
+    background-color: transparent;
+    
+ 
+}
+
+.vasemmalle:hover{
+border-bottom: 10px solid #C4C4C4;
+    border-left: 10px solid #C4C4C4;
+    background: transparent;
+}
+
+
 .hel{
     font-size: 250px;
     color: #FFF;
@@ -98,8 +155,7 @@ body{
     display: none;
     color: #FFF;
     background-color: #000;
-    height: 600px;
-    opacity: 0.50;
+    height: 30em;
 }
 
 .hpiilo ul{

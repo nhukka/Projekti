@@ -7,8 +7,8 @@
         
         <h1 class="hel">HELSINKI</h1>
         <div class="hpiilo">
-            <button id="moveleft">Move Left</button>
-            <button id="moveright">Move right</button>
+            <button class="vasemmalle"></button>
+            <button class="oikealle"></button>
                 <?php
                     $the_query = new WP_Query( array( 'tag_id' => 8 ) );
                     if ( $the_query->have_posts() ) {
