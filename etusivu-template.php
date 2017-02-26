@@ -9,6 +9,7 @@
         <div class="hpiilo">
             <button class="vasemmalle"></button>
             <button class="oikealle"></button>
+            
                 <?php
                     $the_query = new WP_Query( array( 'tag_id' => 8 ) );
                     if ( $the_query->have_posts() ) {
@@ -24,6 +25,8 @@
                     /* Restore original Post Data */
                     wp_reset_postdata();
                 ?>
+            
+          
             
         </div>
         <h1 class="esp">ESPOO</h1>

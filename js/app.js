@@ -31,12 +31,12 @@ jQuery(function() {
 
 
     jQuery('.vasemmalle').click(function() {
-        jQuery('.hpiilo ul').animate({
+        jQuery('.hpiilo ul li').animate({
         'marginLeft' : "-=250px" //liikuttaa diviä vasemmalle
         });
     });
     jQuery('.oikealle').click(function() {
-        jQuery('.hpiilo ul').animate({
+        jQuery('.hpiilo ul li').animate({
         'marginLeft' : "+=250px" //liikuttaa diviä oikeelle
         });
     });
