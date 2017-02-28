@@ -31,13 +31,13 @@ jQuery(function() {
 
 
     jQuery('.vasemmalle').click(function() {
-        jQuery('.hpiilo ul li').animate({
-        'marginLeft' : "-=250px" //liikuttaa diviä vasemmalle
+        jQuery('.hpiilo ul li img').animate({
+        'marginLeft' : "-=250px"
         });
     });
     jQuery('.oikealle').click(function() {
-        jQuery('.hpiilo ul li').animate({
-        'marginLeft' : "+=250px" //liikuttaa diviä oikeelle
+        jQuery('.hpiilo ul li img').animate({
+        'marginLeft' : "+=250px" //nyt liikuttaa kuvia mut nyt niiden margini kasvaa ja näyttää hassulta
         });
     });
     

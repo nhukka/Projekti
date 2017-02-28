@@ -7,8 +7,7 @@
         
         <h1 class="hel">HELSINKI</h1>
         <div class="hpiilo">
-            <button class="vasemmalle"></button>
-            <button class="oikealle"></button>
+            
             
                 <?php
                     $the_query = new WP_Query( array( 'tag_id' => 8 ) );
@@ -25,6 +24,8 @@
                     /* Restore original Post Data */
                     wp_reset_postdata();
                 ?>
+            <button class="vasemmalle"></button>
+            <button class="oikealle"></button>
             
           
             
