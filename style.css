@@ -78,8 +78,8 @@ body{
 
 /* isot tekstit */
 
-
-.oikealle{
+/*HELSINKI*/
+.h_oikea{
     position:absolute;
     display: block;
     box-sizing: border-box;
@@ -103,13 +103,13 @@ body{
  
 }
 
- .oikealle:hover{
+ .h_oikea:hover{
 border-right: 20px solid #C4C4C4;
     border-top: 20px solid #C4C4C4;
     background: transparent;
 } 
 
-.vasemmalle{
+.h_vasen{
      position:absolute;
     display: block;
     box-sizing: border-box;
@@ -133,7 +133,7 @@ border-right: 20px solid #C4C4C4;
  
 }
 
-.vasemmalle:hover{
+.h_vasen:hover{
 border-bottom: 20px solid #C4C4C4;
     border-left: 20px solid #C4C4C4;
     background: transparent;
@@ -177,6 +177,67 @@ border-bottom: 20px solid #C4C4C4;
     margin: 6em 1em 1em 1em;
 }
 
+/*ESPOO*/
+
+.e_oikea{
+    position:absolute;
+    display: block;
+    box-sizing: border-box;
+    margin-top: 10em;
+    margin-right: 5em;
+    top: 800px;
+    right: 0;
+    width: 137px;
+    height: 137px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-right: 20px solid #FFF;
+    border-top: 20px solid #FFF;
+    border-bottom: transparent;
+    border-left: transparent;
+    background-color: transparent;
+    
+ 
+}
+
+ .e_oikea:hover{
+border-right: 20px solid #C4C4C4;
+    border-top: 20px solid #C4C4C4;
+    background: transparent;
+} 
+
+.e_vasen{
+     position:absolute;
+    display: block;
+    box-sizing: border-box;
+    margin-top: 10em;
+    margin-left: 5em;
+    top: 800px;
+    left: 0;
+    width: 137px;
+    height: 137px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-bottom: 20px solid #FFF;
+    border-left: 20px solid #FFF;
+    border-right: transparent;
+    border-top: transparent;
+    background-color: transparent;
+    
+ 
+}
+
+.e_vasen:hover{
+    border-bottom: 20px solid #C4C4C4;
+    border-left: 20px solid #C4C4C4;
+    background: transparent;
+}
 .esp{
     font-size: 250px;
     color: #FFF;
@@ -184,6 +245,8 @@ border-bottom: 20px solid #C4C4C4;
     margin: 0;
     cursor: pointer;
     line-height: 0.8em;
+    position: relative;
+    
 }
 
 .espback{
@@ -193,8 +256,82 @@ border-bottom: 20px solid #C4C4C4;
     display: none;
     color: #FFF;
     background-color: #000;
-    height: 600px;
+    height: 30em;
 }
+
+.epiilo ul{
+    display: flex;
+    list-style-type: none; 
+    overflow: hidden;
+}
+
+.epiilo ul li img{
+    max-height: 20em;
+    max-width: 20em;
+    margin: 6em 1em 1em 1em;
+}
+
+/*VANTAA*/
+.v_oikea{
+    position:absolute;
+    display: block;
+    box-sizing: border-box;
+    margin-top: 10em;
+    margin-right: 5em;
+    top: 1000px;
+    right: 0;
+    width: 137px;
+    height: 137px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-right: 20px solid #FFF;
+    border-top: 20px solid #FFF;
+    border-bottom: transparent;
+    border-left: transparent;
+    background-color: transparent;
+    
+ 
+}
+
+ .v_oikea:hover{
+border-right: 20px solid #C4C4C4;
+    border-top: 20px solid #C4C4C4;
+    background: transparent;
+} 
+
+.v_vasen{
+     position:absolute;
+    display: block;
+    box-sizing: border-box;
+    margin-top: 10em;
+    margin-left: 5em;
+    top: 1000px;
+    left: 0;
+    width: 137px;
+    height: 137px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-bottom: 20px solid #FFF;
+    border-left: 20px solid #FFF;
+    border-right: transparent;
+    border-top: transparent;
+    background-color: transparent;
+    
+ 
+}
+
+.v_vasen:hover{
+border-bottom: 20px solid #C4C4C4;
+    border-left: 20px solid #C4C4C4;
+    background: transparent;
+}
+
 .van{
     font-size: 250px;
     color: #FFF;
@@ -202,6 +339,8 @@ border-bottom: 20px solid #C4C4C4;
     margin: 0;
     cursor: pointer;
     line-height: 0.8em;
+    position: relative;
+    
 }
 .vanback{
     color: #89FFD4;
@@ -211,7 +350,19 @@ border-bottom: 20px solid #C4C4C4;
     display: none;
     color: #FFF;
     background-color: #000;
-    height: 600px;
+    height: 30em;
+}
+
+.vpiilo ul{
+    display: flex;
+    list-style-type: none; 
+    overflow: hidden;
+}
+
+.vpiilo ul li img{
+    max-height: 20em;
+    max-width: 20em;
+    margin: 6em 1em 1em 1em;
 }
 
 
@@ -219,6 +370,7 @@ border-bottom: 20px solid #C4C4C4;
     height: 300px;
     width: 80%;
 }
+
 .footer{
     position: absolute;
     width: 100%;

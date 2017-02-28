@@ -8,6 +8,9 @@
         <h1 class="hel">HELSINKI</h1>
         <div class="hpiilo">
             
+       <!-- MUISTA NEA TEHÄ KUVISTA LINKIT JOISTA AUKEE LIGHTBOX!!
+            MUOKKAA KUVIEN LIIKKUMINEN ETTEI MUOKKAA MARGINAALIA
+            RESPONSIIVISUUS NAVILLE, KUVILLE, TEKSTEILLE-->   
             
                 <?php
                     $the_query = new WP_Query( array( 'tag_id' => 8 ) );
@@ -24,8 +27,8 @@
                     /* Restore original Post Data */
                     wp_reset_postdata();
                 ?>
-            <button class="vasemmalle"></button>
-            <button class="oikealle"></button>
+                    <button class="h_vasen"></button>
+                    <button class="h_oikea"></button>
             
           
             
@@ -48,14 +51,31 @@
                     /* Restore original Post Data */
                     wp_reset_postdata();
                 ?>
+                    <button class="e_vasen"></button>
+                    <button class="e_oikea"></button>
             </div>
+        
         <h1 class="van">VANTAA</h1>    
-            <div class="vpiilo"></div>
-        
-        
-       
-        
-
+            <div class="vpiilo">
+                <?php
+                    $the_query = new WP_Query( array( 'tag_id' => 13 ) );
+                    if ( $the_query->have_posts() ) {
+                        echo '<ul>';
+                        while ( $the_query->have_posts() ) {
+                            $the_query->the_post();
+                            echo '<li>' . get_the_content() . '</li>';
+                        }
+                        echo '</ul>';
+                    } else {
+                        // no posts found
+                    }
+                    /* Restore original Post Data */
+                    wp_reset_postdata();
+                ?>
+                    <button class="v_vasen"></button>
+                    <button class="v_oikea"></button>
+            </div>
+            
 </div>  
     
     <?php get_footer();?>

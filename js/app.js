@@ -30,18 +30,39 @@ jQuery(function() {
     
 
 
-    jQuery('.vasemmalle').click(function() {
+    jQuery('.h_vasen').click(function() {
         jQuery('.hpiilo ul li img').animate({
         'marginLeft' : "-=250px"
         });
     });
-    jQuery('.oikealle').click(function() {
+    jQuery('.h_oikea').click(function() {
         jQuery('.hpiilo ul li img').animate({
+        'marginLeft' : "+=250px" //nyt liikuttaa kuvia mut nyt niiden margini kasvaa ja näyttää hassulta
+        });
+       }); 
+      jQuery('.e_vasen').click(function() {
+        jQuery('.epiilo ul li img').animate({
+        'marginLeft' : "-=250px"
+        });
+    });
+    jQuery('.e_oikea').click(function() {
+        jQuery('.epiilo ul li img').animate({
+        'marginLeft' : "+=250px" //nyt liikuttaa kuvia mut nyt niiden margini kasvaa ja näyttää hassulta
+        });
+        });
+          jQuery('.v_vasen').click(function() {
+        jQuery('.vpiilo ul li img').animate({
+        'marginLeft' : "-=250px"
+        });
+    });
+        jQuery('.v_oikea').click(function() {
+        jQuery('.vpiilo ul li img').animate({
         'marginLeft' : "+=250px" //nyt liikuttaa kuvia mut nyt niiden margini kasvaa ja näyttää hassulta
         });
     });
     
     });
+         
 
 
 
