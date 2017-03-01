@@ -60,6 +60,7 @@ body{
 .main-header ul li a:hover{
     text-decoration: none;
     color: #C4C4C4;
+    
 }
 
 .content-row{
@@ -107,6 +108,7 @@ body{
 border-right: 20px solid #C4C4C4;
     border-top: 20px solid #C4C4C4;
     background: transparent;
+    cursor: pointer;
 } 
 
 .h_vasen{
@@ -137,6 +139,7 @@ border-right: 20px solid #C4C4C4;
 border-bottom: 20px solid #C4C4C4;
     border-left: 20px solid #C4C4C4;
     background: transparent;
+    cursor: pointer;
 }
 
 
@@ -207,6 +210,8 @@ border-bottom: 20px solid #C4C4C4;
 border-right: 20px solid #C4C4C4;
     border-top: 20px solid #C4C4C4;
     background: transparent;
+    cursor: pointer;
+    
 } 
 
 .e_vasen{
@@ -237,6 +242,7 @@ border-right: 20px solid #C4C4C4;
     border-bottom: 20px solid #C4C4C4;
     border-left: 20px solid #C4C4C4;
     background: transparent;
+    cursor: pointer;
 }
 .esp{
     font-size: 250px;
@@ -300,6 +306,7 @@ border-right: 20px solid #C4C4C4;
 border-right: 20px solid #C4C4C4;
     border-top: 20px solid #C4C4C4;
     background: transparent;
+    cursor: pointer;
 } 
 
 .v_vasen{
@@ -330,6 +337,7 @@ border-right: 20px solid #C4C4C4;
 border-bottom: 20px solid #C4C4C4;
     border-left: 20px solid #C4C4C4;
     background: transparent;
+    cursor: pointer;
 }
 
 .van{
