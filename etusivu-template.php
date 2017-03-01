@@ -1,7 +1,7 @@
 <?php /* Template Name: etusivu-template */ ?>
 <?php get_header(); ?>
 <div class="content-row">
-    <img src="http://localhost/wordpress/wp-content/themes/Projekti/img/LogoKK_pieni.png">
+    <img src="http://users.metropolia.fi/~ilkkaper/katukuva/wp-content/themes/Projekti/img/LogoKK_pieni.png">
    
     <div class="kaupungit">
         
@@ -10,10 +10,13 @@
             
        <!-- MUISTA NEA TEHÄ KUVISTA LINKIT JOISTA AUKEE LIGHTBOX!!
             MUOKKAA KUVIEN LIIKKUMINEN ETTEI MUOKKAA MARGINAALIA
-            RESPONSIIVISUUS NAVILLE, KUVILLE, TEKSTEILLE-->   
+            RESPONSIIVISUUS NAVILLE, KUVILLE, TEKSTEILLE.
+
+
+BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE. TEKSTIÄ UUDELLEEN KLIKATTAESSA BUTTONIT KATOAA VASTA, KUN DIV ON MENNYT PIILOON, TÄÄ PITÄÄ FIXATA-->   
             
                 <?php
-                    $the_query = new WP_Query( array( 'tag_id' => 8 ) );
+                    $the_query = new WP_Query( array( 'tag_id' => 3 ) );
                     if ( $the_query->have_posts() ) {
                         echo '<ul>';
                         while ( $the_query->have_posts() ) {
@@ -36,7 +39,7 @@
         <h1 class="esp">ESPOO</h1>
             <div class="epiilo">
                 <?php
-                    $the_query = new WP_Query( array( 'tag_id' => 12 ) );
+                    $the_query = new WP_Query( array( 'tag_id' => 4 ) );
 
                     if ( $the_query->have_posts() ) {
                         echo '<ul>';
@@ -58,7 +61,7 @@
         <h1 class="van">VANTAA</h1>    
             <div class="vpiilo">
                 <?php
-                    $the_query = new WP_Query( array( 'tag_id' => 13 ) );
+                    $the_query = new WP_Query( array( 'tag_id' => 5 ) );
                     if ( $the_query->have_posts() ) {
                         echo '<ul>';
                         while ( $the_query->have_posts() ) {
