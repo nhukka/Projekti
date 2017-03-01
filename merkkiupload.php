@@ -10,8 +10,8 @@ $type = $_GET['type'];
 //tietokanta
 $username= 'root';
 $password= '';
-$host= 'localhost';
-$database='neahu';
+$host= 'shell.metropolia.fi';
+$database='ilkkaper';
 
 //Connect to database
 $dbh = new PDO("mysql:host=lo;dbname=$database", $username, $password);
