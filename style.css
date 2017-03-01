@@ -22,7 +22,7 @@ body{
     height: 100%;
     background-position: center;
     background-size: cover;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Overpass Mono', monospace;
     
 }
 
@@ -36,10 +36,10 @@ body{
 }
 
 .main-header{
-    background-color: #000;
+    background-color: rgb(0, 0, 0); /* fallback color for non supportive browsers */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 1em;
     width: 100% !important;
-    opacity: 0.50;
     
     
 }
@@ -75,6 +75,8 @@ body{
 
 .kaupungit{
     margin-top: 3em;
+    font-family: 'Anton', sans-serif;
+    
 }
 
 /* isot tekstit */
@@ -161,7 +163,8 @@ border-bottom: 20px solid #C4C4C4;
 .hpiilo{
     display: none;
     color: #FFF;
-    background-color: #000;
+    background-color: rgb(0, 0, 0); /* fallback color for non supportive browsers */
+    background-color: rgba(0, 0, 0, 0.5);
     height: 30em;
 }
 
@@ -261,7 +264,8 @@ border-right: 20px solid #C4C4C4;
 .epiilo{
     display: none;
     color: #FFF;
-    background-color: #000;
+    background-color: rgb(0, 0, 0); /* fallback color for non supportive browsers */
+    background-color: rgba(0, 0, 0, 0.5);
     height: 30em;
 }
 
@@ -357,7 +361,8 @@ border-bottom: 20px solid #C4C4C4;
 .vpiilo{
     display: none;
     color: #FFF;
-    background-color: #000;
+    background-color: rgb(0, 0, 0); /* fallback color for non supportive browsers */
+    background-color: rgba(0, 0, 0, 0.5);
     height: 30em;
 }
 
@@ -384,11 +389,16 @@ border-bottom: 20px solid #C4C4C4;
     width: 100%;
     height: 40px;
     color: #FFF;
-    background-color: #000;
+    background: rgb(0, 0, 0); /* fallback color for non supportive browsers */
+    background: rgba(0, 0, 0, 0.5);
     text-align: center;
     padding: 1em;
     margin-top:1em;
-    opacity: 0.50;
+    
+}
+
+#footerbg{
+    
 }
 
 /* Testi */
