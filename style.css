@@ -23,6 +23,7 @@ body{
     background-position: center;
     background-size: cover;
     font-family: 'Overpass Mono', monospace;
+    color: #FFF;
     
 }
 
@@ -32,6 +33,7 @@ body{
     width: 100%;
     height:auto !important;
     padding: 0;
+    color: #FFF;
     
 }
 
