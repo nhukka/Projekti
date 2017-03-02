@@ -81,6 +81,9 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                         <h1 class="page-title">Lisää katukuva</h1>
  
 <!--SUBMIT POST-->
+                    <div id="map"></div>
+                    
+                    
                         <form id="new_post" name="new_post" class="post_work" method="post" enctype="multipart/form-data">
                                 <p><label for="title">Otsikko</label><br />
                                         <input type="text" id="title" class="required" value="" tabindex="1" size="20" name="title" />
@@ -102,14 +105,46 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                                 <input type="hidden" name="action" value="post" />
  
                                 <p align="right"><input type="submit" value="Submit" tabindex="6" id="submit" name="submit" /></p>
+                            
+                                Lat 1:<input type="text" size="20" maxlength="50" name="displayLat" id="displayLat" value=""><br />
+                                Long 1:<input type="text" size="20" maxlength="50" name="displayLong" id="displayLong"><br />
  
                                 <?php wp_nonce_field( 'new-post' ); ?>
                         </form>
  
+                     
                         <script>
+                                //näyttää kartan sivulla
+                                function initMap() {
+                                    var suomi = {lat: 60.8215965, lng: 24.9911299};
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        center: suomi,
+                                        zoom: 13
+                                        });
+      
+          
+                                //lisää paikkatiedon formiin, piilotettuihin inputteihin. EI VIELÄ TALLENNU MINNEKKÄÄN
+                                var map = new google.maps.event.addListener(map, 'click', function(event) {
+                                document.getElementById('displayLat').value = event.latLng.lat();
+                                document.getElementById('displayLong').value = event.latLng.lng(); 
+                                });
+ 
+                                //lisää markkerin kartalle, EI TOIMI VIELÄ
+                                var map = google.maps.event.addListener(map, 'click', function(event) {
+                                    marker = new google.maps.Marker({
+                                        position: event.latLng,
+                                        map: map
+                                        });
+                                });
+                                }
+                        </script>
+                         <!-- <script>  
                             var multi_selector = new MultiSelector( document.getElementById( 'attachment_list' ), 8 );
                             multi_selector.addElement( document.getElementById( 'attachment' ) );
-                        </script>
+                        </script> -->
+                    
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdrDkVOK-e9FVtjG0fr1EzY4gRpU9AsvM&callback=initMap"async defer></script>
+                    
  
 <!--SUBMIT POST END-->
  
