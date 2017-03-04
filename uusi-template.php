@@ -11,11 +11,11 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
         } else {
                 echo 'Please enter a title';
         }
-        if (isset ($_POST['description'])) {
-                $description = htmlentities(trim(stripcslashes($_POST['description'])));
-    } else {
-        echo 'Please enter the content';
-        }
+       // if (isset ($_POST['description'])) {
+        //        $description = htmlentities(trim(stripcslashes($_POST['description'])));
+//    } else {
+  //      echo 'Please enter the content';
+    //    }
  
         $tags = $_POST['post_tags'];
        
@@ -24,7 +24,7 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
         $type = trim($_POST['Type']);
         $post = array(
                 'post_title'    => $title,
-                'post_content'  => $description,
+                //'post_content'  => $file,
                 'post_status'   => 'publish',                     // Choose: pending, preview, future, etc. <- tällä pystyis moderoimaan postauksia, jos laittaa pending niin adminin on hyväksyttävä ennen ku tulee julkiseksi
                 'tags_input'    => array($tags),
                 'tax_input'    => array( $type),
@@ -48,13 +48,11 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                     if ($_FILES[$file]['error'] !== UPLOAD_ERR_OK) {
                         return "upload error : " . $_FILES[$file]['error'];
                     }
-                    $attach_id = media_handle_upload( $file, $new_post );
+                    $attachment_id = media_handle_upload( $file, $new_post );
+                    set_post_thumbnail($new_post,$attachment_id);
                 }   
             }
-            if ($attach_id > 0){
-                //and if you want to set that image as Post  then use:
-                update_post_meta($new_post,'_thumbnail_id',$attach_id);
-            }
+           
 
     
         wp_set_post_terms($post_id,$type,'Type',true);
@@ -88,9 +86,9 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                                 <p><label for="title">Otsikko</label><br />
                                         <input type="text" id="title" class="required" value="" tabindex="1" size="20" name="title" />
                                 </p>
-                                <p><label for="description">Kuvaus</label><br />
+                              <!--  <p><label for="description">Kuvaus</label><br />
                                         <textarea id="description" type="text" class="required" tabindex="3" name="description" cols="50" rows="6"></textarea>
-                                </p>
+                                </p>  
  
                                
 <!--                            <p><label for="attachment">Photos: </label>
@@ -114,23 +112,26 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
  
                      
                         <script>
+                            
+                            var map;
+                            var marker;
                                 //näyttää kartan sivulla
                                 function initMap() {
                                     var suomi = {lat: 60.8215965, lng: 24.9911299};
-                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                    map = new google.maps.Map(document.getElementById('map'), {
                                         center: suomi,
                                         zoom: 13
                                         });
       
           
                                 //lisää paikkatiedon formiin, piilotettuihin inputteihin. EI VIELÄ TALLENNU MINNEKKÄÄN
-                                var map = new google.maps.event.addListener(map, 'click', function(event) {
+                                google.maps.event.addListener(map, 'click', function(event) {
                                 document.getElementById('displayLat').value = event.latLng.lat();
                                 document.getElementById('displayLong').value = event.latLng.lng(); 
                                 });
  
                                 //lisää markkerin kartalle, EI TOIMI VIELÄ
-                                var map = google.maps.event.addListener(map, 'click', function(event) {
+                                google.maps.event.addListener(map, 'click', function(event) {
                                     marker = new google.maps.Marker({
                                         position: event.latLng,
                                         map: map
