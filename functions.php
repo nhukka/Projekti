@@ -38,5 +38,28 @@ function lisaa_kirjasto(){
 
 add_action('wp_enqueue_scripts', 'lisaa_kirjasto');
 
+//nea kokeilee lightboxia
+    function add_themescript(){
+     if(!is_admin()){
+     wp_enqueue_script('thickbox',null,array('jquery'));
+     wp_enqueue_style('thickbox.css', '/'.WPINC.'/js/thickbox/thickbox.css', null, '1.0');
+     }
+}
+ add_action('init','add_themescript');
+
+define("IMAGE_FILETYPE", "(bmp|gif|jpeg|jpg|png)", true);
+function wp_thickbox($string) {
+$pattern = '/(<a(.*?)href="([^"]*.)'.IMAGE_FILETYPE.'"(.*?)><img)/ie';
+$replacement = 'stripslashes(strstr("\2\5","rel=") ? "\1" : "<a\2href=\"\3\4\"\5 class=\"thickbox\"><img")';
+  return preg_replace($pattern, $replacement, $string);
+}
+
+function wp_thickbox_rel( $attachment_link ) {
+$attachment_link = str_replace( 'a href' , 'a rel="thickbox-gallery" class="thickbox" href' , $attachment_link );
+  return $attachment_link;
+}
+add_filter('the_content', 'wp_thickbox');
+add_filter('wp_get_attachment_link' , 'wp_thickbox_rel');
+
 
 ?>

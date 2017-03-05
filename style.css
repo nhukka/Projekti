@@ -169,20 +169,21 @@ border-bottom: 20px solid #C4C4C4;
     background-color: rgb(0, 0, 0); /* fallback color for non supportive browsers */
     background-color: rgba(0, 0, 0, 0.5);
     height: 30em;
+     
 }
 
-.hpiilo ul{
-    display: flex;
+.hpiilo article{
+    display: flex !important;
     list-style-type: none; 
     overflow: hidden;
-    
-    
-   
 }
 
-.hpiilo ul li img{
+
+
+.hpiilo article img{
+   
     max-height: 20em;
-    max-width: 20em;
+    max-width: 100%;
     margin: 6em 1em 1em 1em;
 }
 

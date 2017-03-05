@@ -16,28 +16,32 @@
 BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE. TEKSTIÄ UUDELLEEN KLIKATTAESSA BUTTONIT KATOAA VASTA, KUN DIV ON MENNYT PIILOON, TÄÄ PITÄÄ FIXATA-->   
             
                 <?php
-                    $the_query = new WP_Query( array( 'tag_id' => 3 ) );
+                    $the_query = new WP_Query( array( 'tag_id' => 8 ) );
+                    foreach ($the_query as $kuvat);
                     if ( $the_query->have_posts() ) {
-                        echo '<ul>';
+                        
                         while ( $the_query->have_posts() ) {
-                            $the_query->the_post();
-                            echo '<li>' . get_the_content() . '</li>';
+                            $the_query->the_post();?>
+            <article>               
+            <a href="<?php echo get_permalink() ?>">
+                            <?php echo get_the_content(); ?>
+                                </a>
+                </article> 
+            <?php
                         }
-                        echo '</ul>';
-                    } else {
-                        // no posts found
+                       
                     }
                     /* Restore original Post Data */
                     wp_reset_postdata();
                 ?>
+    
                     <button class="h_vasen"></button>
                     <button class="h_oikea"></button>
-            
-          
             
         </div>
         <h1 class="esp">ESPOO</h1>
             <div class="epiilo">
+                
                 <?php
                     $the_query = new WP_Query( array( 'tag_id' => 4 ) );
 

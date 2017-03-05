@@ -31,12 +31,12 @@ jQuery(function() {
 
 
     jQuery('.h_vasen').click(function() {
-        jQuery('.hpiilo ul li img').animate({
+        jQuery('.hpiilo img').animate({
         'marginLeft' : "-=250px"
         });
     });
     jQuery('.h_oikea').click(function() {
-        jQuery('.hpiilo ul li img').animate({
+        jQuery('.hpiilo img').animate({
         'marginLeft' : "+=250px" //nyt liikuttaa kuvia mut nyt niiden margini kasvaa ja näyttää hassulta
         });
        }); 
