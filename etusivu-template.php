@@ -14,19 +14,21 @@
 
 
 BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE. TEKSTIÄ UUDELLEEN KLIKATTAESSA BUTTONIT KATOAA VASTA, KUN DIV ON MENNYT PIILOON, TÄÄ PITÄÄ FIXATA-->   
-            
+            <ul>
                 <?php
+                
+                //MUISTA VAIHTAA SUN OMAT ID NOIHIN ET TOIMII SULLA
                     $the_query = new WP_Query( array( 'tag_id' => 8 ) );
                     foreach ($the_query as $kuvat);
                     if ( $the_query->have_posts() ) {
-                        
+                       
                         while ( $the_query->have_posts() ) {
                             $the_query->the_post();?>
-            <article>               
-            <a href="<?php echo get_permalink() ?>">
+                          
+            <a href="<?php echo get_permalink( $kuvat ['ID']) ?>">
                             <?php echo get_the_content(); ?>
                                 </a>
-                </article> 
+                 
             <?php
                         }
                        
@@ -37,19 +39,19 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
     
                     <button class="h_vasen"></button>
                     <button class="h_oikea"></button>
-            
+         </ul>   
         </div>
         <h1 class="esp">ESPOO</h1>
             <div class="epiilo">
                 
                 <?php
-                    $the_query = new WP_Query( array( 'tag_id' => 4 ) );
+                    $the_query = new WP_Query( array( 'tag_id' => 12 ) );
 
                     if ( $the_query->have_posts() ) {
                         echo '<ul>';
                         while ( $the_query->have_posts() ) {
                             $the_query->the_post();
-                            echo '<li>' . get_the_post_thumbnail() . '</li>';
+                            echo '<li>'. get_the_post_thumbnail() . '</li>';
                         }
                         echo '</ul>';
                     } else {

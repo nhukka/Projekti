@@ -30,36 +30,33 @@ jQuery(function() {
     
 
 
-    jQuery('.h_vasen').click(function() {
-        jQuery('.hpiilo img').animate({
-        'marginLeft' : "-=250px"
+    jQuery(".h_vasen").click(function() {
+        jQuery(".hpiilo ul a img").animate({
+            left:'+=100px'
         });
+       
     });
-    jQuery('.h_oikea').click(function() {
-        jQuery('.hpiilo img').animate({
-        'marginLeft' : "+=250px" //nyt liikuttaa kuvia mut nyt niiden margini kasvaa ja näyttää hassulta
+     jQuery(".h_oikea").click(function() {
+        jQuery(".hpiilo ul a img").animate({
+            left:'-=100px'
         });
-       }); 
-      jQuery('.e_vasen').click(function() {
-        jQuery('.epiilo ul li img').animate({
-        'marginLeft' : "-=250px"
-        });
+       
     });
-    jQuery('.e_oikea').click(function() {
-        jQuery('.epiilo ul li img').animate({
-        'marginLeft' : "+=250px" //nyt liikuttaa kuvia mut nyt niiden margini kasvaa ja näyttää hassulta
+    
+    jQuery(".e_vasen").click(function() {
+        jQuery(".epiilo ul a img").animate({
+            left:'+=100px'
         });
-        });
-          jQuery('.v_vasen').click(function() {
-        jQuery('.vpiilo ul li img').animate({
-        'marginLeft' : "-=250px"
-        });
+       
     });
-        jQuery('.v_oikea').click(function() {
-        jQuery('.vpiilo ul li img').animate({
-        'marginLeft' : "+=250px" //nyt liikuttaa kuvia mut nyt niiden margini kasvaa ja näyttää hassulta
+     jQuery(".e_oikea").click(function() {
+        jQuery(".epiilo ul a img").animate({
+            left:'-=100px'
         });
+       
     });
+   
+
     
     });
          

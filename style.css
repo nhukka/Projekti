@@ -172,19 +172,27 @@ border-bottom: 20px solid #C4C4C4;
      
 }
 
-.hpiilo article{
+.hpiilo ul{
     display: flex !important;
     list-style-type: none; 
     overflow: hidden;
 }
 
+.hpiilo ul a{
+    display: block;
+    
+}
 
 
-.hpiilo article img{
-   
-    max-height: 20em;
+
+.hpiilo ul a img{
+    position: relative;
     max-width: 100%;
-    margin: 6em 1em 1em 1em;
+    height: 20em;
+    margin-top: 5em;
+    margin-left: 2em;
+    margin-right: 2em;
+   
 }
 
 /*ESPOO*/
