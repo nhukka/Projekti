@@ -18,6 +18,9 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
     //    }
  
         $tags = $_POST['post_tags'];
+        $displaylat = $_POST['displayLat'];
+        $displaylong = $_POST['displayLong'];
+        
        
  
         // Add the content of the form to $post as an array
@@ -30,15 +33,20 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                 'tax_input'    => array( $type),
                 'comment_status' => 'closed',
                 'post_author' => '2',
+                'displayLat'    =>   $displaylat,
+                'displayLong'    =>   $displaylong
+               
             
             
                 
         );
         $post_id = wp_insert_post($post);
+  
     
         $new_post = wp_insert_post($post_array);
     
         if (!function_exists('wp_generate_attachment_metadata')){
+                require_once(ABSPATH . "wp-admin" . '/includes/post.php');
                 require_once(ABSPATH . "wp-admin" . '/includes/image.php');
                 require_once(ABSPATH . "wp-admin" . '/includes/file.php');
                 require_once(ABSPATH . "wp-admin" . '/includes/media.php');
@@ -56,6 +64,11 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
 
     
         wp_set_post_terms($post_id,$type,'Type',true);
+        add_post_meta($post_id, 'metadisplayLat', $displaylat, false);
+        add_post_meta($post_id, 'metadisplayLong', $displaylong, false);
+       
+        
+       
         
         wp_redirect( home_url('/listing-submitted/') ); // redirect to home page after submit
         exit();
@@ -104,7 +117,7 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
  
                                 <p align="right"><input type="submit" value="Submit" tabindex="6" id="submit" name="submit" /></p>
                             
-                                Lat 1:<input type="text" size="20" maxlength="50" name="displayLat" id="displayLat" value=""><br />
+                                Lat 1:<input type="text" size="20" maxlength="50" name="displayLat" id="displayLat"><br />
                                 Long 1:<input type="text" size="20" maxlength="50" name="displayLong" id="displayLong"><br />
  
                                 <?php wp_nonce_field( 'new-post' ); ?>
