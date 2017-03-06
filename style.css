@@ -54,6 +54,11 @@ body{
             
 }
 
+/*tää poistaa sen responsiivisen valikko hampparin*/
+.main-header li:nth-of-type(1){
+    display:none;
+}
+
 .main-header ul li a{
     text-decoration: none;
     color: #FFF;
@@ -412,6 +417,61 @@ footer{
     
 }
 
+/* responsiivisuus */
 
+@media screen and (min-width: 641px){
+    .main-header li{
+        display: inline-block !important;
+    }
+    .main-header > ul > li:nth-of-type(1){
+        display: none !important;
+    }
+    
+
+}
+
+@media screen and (max-width: 640px){
+    .main-header{
+    width: 100%;
+    text-align: center;
+}
+    
+    .main-header li{
+    display:none;
+        
+}
+ 
+    .main-header li:nth-of-type(1){
+    display: inline-block;
+}
+    
+    .content-row img{
+    display:block;
+    margin: auto;
+    width: 100%;
+}
+    .hel{
+    font-size: 150px;
+}
+        .esp{
+    font-size: 180px;
+}
+        .van{
+    font-size: 180px;
+}
+    
+}
+/*sitä varten et tekstit istuis paremmin kännykkäversiossa*/
+@media screen and (max-width: 400px){
+       .hel{
+    font-size: 90px;
+}
+     .esp{
+    font-size: 90px;
+}
+     .van{
+    font-size: 90px;
+}
+}
 
 
