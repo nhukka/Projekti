@@ -7,10 +7,34 @@
                 <div id="content" role="main">
  
                     <div id="map"></div>
+<script>
+ var Koordinaatit = {
+lat: {<?php echo get_post_meta($post->ID, 'metadisplayLat', true) ?>, lng <?php
+echo get_post_meta($post->ID, 'metadisplayLong', true);
+?>
+}};
+</script>           
                     
-                    
-                      
+                     <?php
+                    $the_query = new WP_Query( array() );
+                    if ( $the_query->have_posts() ) {
+                        echo '<script>
+                        var Koordinaatit = [';
+                        while ( $the_query->have_posts() ) {
+                            $the_query->the_post();
+                            echo '{lat:'.
+                            get_post_meta($post->ID, 'metadisplayLat', true) .',lng:'. get_post_meta($post->ID, 'metadisplayLong', true).'}';
+                            
+                        }
+                        echo ']</script>';
+                    } else {
+                        // no posts found
+                    }
+                    /* Restore original Post Data */
+                    wp_reset_postdata();
+                ?>
                         <script>
+                            
                             
                         var map;
                         var marker;

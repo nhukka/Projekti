@@ -254,11 +254,11 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
  
                                 //lisää markkerin kartalle
                                // google.maps.event.addListener(map, 'click', function(event) {
-                                //    marker = new google.maps.Marker({
-                                  //      position: event.latLng,
-                                    //    map: map
-                                      //  });
-                               // });
+                               //   marker = new google.maps.Marker({
+                                //     position: event.latLng,
+                                 //    map: map
+                                   //   });
+                              //  });
                                 
                                 google.maps.event.addListener(map, 'click', function(event) {
                                     placeMarker(event.latLng);

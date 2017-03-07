@@ -18,7 +18,7 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
                 <?php
                 
                 //MUISTA VAIHTAA SUN OMAT ID NOIHIN ET TOIMII SULLA
-                    $the_query = new WP_Query( array( 'tag_id' => 3 ) );
+                    $the_query = new WP_Query( array( 'tag_id' => 8 ) );
                     foreach ($the_query as $kuvat);
                     if ( $the_query->have_posts() ) {
                        
@@ -45,7 +45,7 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
             <div class="epiilo">
                 
                 <?php
-                    $the_query = new WP_Query( array( 'tag_id' => 4 ) );
+                    $the_query = new WP_Query( array( 'tag_id' => 12 ) );
 
                     if ( $the_query->have_posts() ) {
                         echo '<ul>';
