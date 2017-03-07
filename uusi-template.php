@@ -11,18 +11,12 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
         } else {
                 echo 'Please enter a title';
         }
-       // if (isset ($_POST['description'])) {
-        //        $description = htmlentities(trim(stripcslashes($_POST['description'])));
-//    } else {
-  //      echo 'Please enter the content';
-    //    }
  
         $tags = $_POST['post_tags'];
         $displaylat = $_POST['displayLat'];
         $displaylong = $_POST['displayLong'];
         
-       
- 
+
         // Add the content of the form to $post as an array
         $type = trim($_POST['Type']);
         $post = array(
@@ -35,18 +29,14 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                 'post_author' => '2',
                 'displayLat'    =>   $displaylat,
                 'displayLong'    =>   $displaylong
-               
-            
-            
-                
+                       
         );
+    
         $post_id = wp_insert_post($post);
   
-    
-        $new_post = wp_insert_post($post_array);
+        //$new_post = wp_insert_post($post_array);
     
         if (!function_exists('wp_generate_attachment_metadata')){
-                require_once(ABSPATH . "wp-admin" . '/includes/post.php');
                 require_once(ABSPATH . "wp-admin" . '/includes/image.php');
                 require_once(ABSPATH . "wp-admin" . '/includes/file.php');
                 require_once(ABSPATH . "wp-admin" . '/includes/media.php');
@@ -56,11 +46,14 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                     if ($_FILES[$file]['error'] !== UPLOAD_ERR_OK) {
                         return "upload error : " . $_FILES[$file]['error'];
                     }
-                    $attachment_id = media_handle_upload( $file, $new_post );
-                    set_post_thumbnail($new_post,$attachment_id);
+                    $attach_id = media_handle_upload( $file, $post_id );
+                    //set_post_thumbnail($new_post,$attach_id);
                 }   
             }
-           
+             if ($attach_id > 0){
+                //and if you want to set that image as Post  then use:
+                update_post_meta($post_id,'_thumbnail_id',$attach_id);
+            }
 
     
         wp_set_post_terms($post_id,$type,'Type',true);
@@ -70,16 +63,8 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
         
        
         
-        wp_redirect( home_url('/listing-submitted/') ); // redirect to home page after submit
-        exit();
- 
-            if ($_FILES) {
-                foreach ($_FILES as $file => $array) {
-                    $newupload = insert_attachment($file,$post_id);
-                    // $newupload returns the attachment id of the file that
-                    // was just uploaded. Do whatever you want with that now.
-                }
-        }
+        wp_redirect( home_url('') ); // redirect to home page after submit
+       
 }
  // end IF
 
@@ -97,18 +82,9 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                     
                         <form id="new_post" name="new_post" class="post_work" method="post" enctype="multipart/form-data">
                                 <p><label for="title">Otsikko</label><br />
-                                        <input type="text" id="title" class="required" value="" tabindex="1" size="20" name="title" />
+                                <input type="text" id="title" class="required" value="" tabindex="1" size="20" name="title" />
                                 </p>
-                              <!--  <p><label for="description">Kuvaus</label><br />
-                                        <textarea id="description" type="text" class="required" tabindex="3" name="description" cols="50" rows="6"></textarea>
-                                </p>  
- 
-                               
-<!--                            <p><label for="attachment">Photos: </label>
-                                        <input type="file" id="attachment">
-                                        <div id="attachment_list"></div></p>
--->
-                            
+
                                 <input type="file" name="thumbnail" id="thumbnail">
  
                                 <p>Tägit: <input type="text" value="" tabindex="35" name="post_tags" id="post_tags" /></p>
@@ -117,8 +93,8 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
  
                                 <p align="right"><input type="submit" value="Submit" tabindex="6" id="submit" name="submit" /></p>
                             
-                                Lat 1:<input type="text" size="20" maxlength="50" name="displayLat" id="displayLat"><br />
-                                Long 1:<input type="text" size="20" maxlength="50" name="displayLong" id="displayLong"><br />
+                                <input type="hidden" size="20" maxlength="50" name="displayLat" id="displayLat"><br />
+                                <input type="hidden" size="20" maxlength="50" name="displayLong" id="displayLong"><br />
  
                                 <?php wp_nonce_field( 'new-post' ); ?>
                         </form>
@@ -137,13 +113,13 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                                         });
       
           
-                                //lisää paikkatiedon formiin, piilotettuihin inputteihin. EI VIELÄ TALLENNU MINNEKKÄÄN
+                                //lisää paikkatiedon formiin, piilotettuihin inputteihin.
                                 google.maps.event.addListener(map, 'click', function(event) {
                                 document.getElementById('displayLat').value = event.latLng.lat();
                                 document.getElementById('displayLong').value = event.latLng.lng(); 
                                 });
  
-                                //lisää markkerin kartalle, EI TOIMI VIELÄ
+                                //lisää markkerin kartalle
                                 google.maps.event.addListener(map, 'click', function(event) {
                                     marker = new google.maps.Marker({
                                         position: event.latLng,
@@ -152,11 +128,7 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                                 });
                                 }
                         </script>
-                         <!-- <script>  
-                            var multi_selector = new MultiSelector( document.getElementById( 'attachment_list' ), 8 );
-                            multi_selector.addElement( document.getElementById( 'attachment' ) );
-                        </script> -->
-                    
+                         
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdrDkVOK-e9FVtjG0fr1EzY4gRpU9AsvM&callback=initMap"async defer></script>
                     
  
