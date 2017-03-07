@@ -253,12 +253,34 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                                 });
  
                                 //lisää markkerin kartalle
+                               // google.maps.event.addListener(map, 'click', function(event) {
+                                //    marker = new google.maps.Marker({
+                                  //      position: event.latLng,
+                                    //    map: map
+                                      //  });
+                               // });
+                                
                                 google.maps.event.addListener(map, 'click', function(event) {
-                                    marker = new google.maps.Marker({
-                                        position: event.latLng,
-                                        map: map
-                                        });
+                                    placeMarker(event.latLng);
                                 });
+
+                                function placeMarker(location) {
+
+                                    if (marker == undefined){
+                                            marker = new google.maps.Marker({
+                                                position: event.latLng,
+                                                map: map 
+                                                
+                                            });
+                                    }
+                                    else{
+                                        marker.setPosition(location);
+                                    }
+                                    
+
+                                }
+
+                                
                                 }
                         </script>
                     
