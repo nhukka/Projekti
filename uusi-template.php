@@ -75,23 +75,25 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                 <div id="content" role="main">
  
                         <h1 class="page-title">LISÄÄ KATUKUVA</h1>
+                        <h3 class="page-exrpt">Klikkaa kartalle ja lisää tiedosto.</h3>
  
 <!--SUBMIT POST-->
                     <div id="map"></div>
                     
                     
                         <form id="new_post" name="new_post" class="post_work" method="post" enctype="multipart/form-data">
-                                <p><label for="title">Otsikko</label><br />
-                                <input type="text" id="title" class="required" value="" tabindex="1" size="20" name="title" />
-                                </p>
-
-                                <input type="file" name="thumbnail" id="thumbnail">
- 
-                                <p>Tägit: <input type="text" value="" tabindex="35" name="post_tags" id="post_tags" /></p>
+                                
+                                <input class="formi" type="text" id="title" class="required" value="" tabindex="1" size="20" name="title" placeholder="OTSIKKO.."/>
+                                
+                                <input class="formi" type="text" value="" tabindex="35" name="post_tags" placeholder="TÄGIT.." id="post_tags" />
                                 <input type="hidden" name="post_type" id="post_type" value="domande" />
                                 <input type="hidden" name="action" value="post" />
- 
-                                <p align="right"><input type="submit" value="Submit" tabindex="6" id="submit" name="submit" /></p>
+                            
+                                <label for="thumbnail">VALITSE KUVA</label>
+                                <input type="file" name="thumbnail" id="thumbnail">
+                                
+                                <label for="submit">LÄHETÄ</label>
+                                <input type="submit" value="Submit" tabindex="6" id="submit" name="submit" />
                             
                                 <input type="hidden" size="20" maxlength="50" name="displayLat" id="displayLat"><br />
                                 <input type="hidden" size="20" maxlength="50" name="displayLong" id="displayLong"><br />

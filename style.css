@@ -93,6 +93,58 @@ body{
     text-align: center;
 }
 
+.page-exrpt{
+    text-align: center;
+}
+
+label {
+   cursor: pointer;
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    background-color: #C4C4C4;
+    border: 3px solid #C4C4C4;
+}
+    
+
+label:hover{
+    background-color: #C4C4C4;
+    color: #E58195;
+}
+
+#thumbnail {
+   opacity: 0;
+   position: absolute;
+   z-index: -1;
+}
+#submit {
+   opacity: 0;
+   position: absolute;
+   z-index: -1;
+}
+
+.formi{
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+}
+
+.formi::-webkit-input-placeholder {
+  font-family: 'Anton', sans-serif;
+}
+.formi:-ms-input-placeholder {
+  font-family: 'Anton', sans-serif;
+}
+.formi:-moz-placeholder {
+  font-family: 'Anton', sans-serif;
+}
+.formi::-moz-placeholder {
+  font-family: 'Anton', sans-serif;
+}
+
+#new_post{
+    text-align: center;
+    padding-top: 1em;
+}
+
 /* isot tekstit */
 
 /*HELSINKI*/

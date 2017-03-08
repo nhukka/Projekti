@@ -7,13 +7,7 @@
                 <div id="content" role="main">
  
                     <div id="map"></div>
-<script>
- var Koordinaatit = {
-lat: {<?php echo get_post_meta($post->ID, 'metadisplayLat', true) ?>, lng <?php
-echo get_post_meta($post->ID, 'metadisplayLong', true);
-?>
-}};
-</script>           
+        
                     
                      <?php
                     $the_query = new WP_Query( array() );
@@ -178,6 +172,13 @@ echo get_post_meta($post->ID, 'metadisplayLong', true);
                     };
 
                       map = new google.maps.Map(document.getElementById('map'), myOptions);          
+                                
+                        var Koordinaatit = {
+                        lat: {<?php echo get_post_meta($post->ID, 'metadisplayLat', true) ?>, lng: <?php
+                        echo get_post_meta($post->ID, 'metadisplayLong', true);
+                        ?>
+                        }};
+                         
       
           
                                
