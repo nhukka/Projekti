@@ -106,9 +106,14 @@ label {
 }
     
 
-label:hover{
+label[for=submit]:hover{
     background-color: #C4C4C4;
     color: #E58195;
+}
+
+label[for=thumbnail]:hover{
+    background-color: #C4C4C4;
+    color: #89FFD4;
 }
 
 #thumbnail {
