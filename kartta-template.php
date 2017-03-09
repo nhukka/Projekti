@@ -8,10 +8,6 @@
  
                     <div id="map"></div>
         
-                    
-                     
-                    
-           
             <!--   ei toimi tän kanssa toi $testi vaa tää on se mitä ilen ohjeessa oli, en vaan ymmärrä miten noi pilkut tuolla ja pisteet menee ku toi herjaa 
             
                     $the_query = new WP_Query( array() );
@@ -40,146 +36,143 @@
                             function initMap() {
                             var suomi = {lat: 60.230635, lng: 25.404319};
                            
-
-                                
-                           
-                        var myOptions = {
-                        zoom: 10,
-                        center: suomi,
-                        disableDefaultUI: true,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP,
-                        styles: [{
-                            "stylers": [{
-                                "saturation": 30
-                            }, {
-                                "lightness": 100
-                            }]
-                        }, {
-                            "elementType": "geometry",
-                            "stylers": [{
-                                "color": "#f5f5f5"
-                            }]
-                        }, {
-                            "elementType": "labels.icon",
-                            "stylers": [{
-                                "visibility": "off"
-                            }]
-                        }, {
-                            "elementType": "labels.text.fill",
-                            "stylers": [{
-                                "color": "#616161"
-                            }]
-                        }, {
-                            "elementType": "labels.text.stroke",
-                            "stylers": [{
-                                "color": "#f5f5f5"
-                            }]
-                        }, {
-                            "featureType": "administrative.land_parcel",
-                            "elementType": "labels.text.fill",
-                            "stylers": [{
-                                "color": "#bdbdbd"
-                            }]
-                        }, {
-                            "featureType": "landscape",
-                            "stylers": [{
-                                "color": "#bfbfbf"
-                            }, {
-                                "saturation": -5
-                            }]
-                        }, {
-                            "featureType": "poi",
-                            "elementType": "geometry",
-                            "stylers": [{
-                                "color": "#eeeeee"
-                            }]
-                        }, {
-                            "featureType": "poi",
-                            "elementType": "labels.text.fill",
-                            "stylers": [{
-                                "color": "#757575"
-                            }]
-                        }, {
-                            "featureType": "poi.park",
-                            "elementType": "geometry",
-                            "stylers": [{
-                                "color": "#dbdbdb"
-                            }, {
-                                "visibility": "simplified"
-                            }]
-                        }, {
-                            "featureType": "poi.park",
-                            "elementType": "labels.text.fill",
-                            "stylers": [{
-                                "color": "#9e9e9e"
-                            }]
-                        }, {
-                            "featureType": "road",
-                            "elementType": "geometry",
-                            "stylers": [{
-                                "color": "#ffffff"
-                            }]
-                        }, {
-                            "featureType": "road.arterial",
-                            "elementType": "labels.text.fill",
-                            "stylers": [{
-                                "color": "#757575"
-                            }]
-                        }, {
-                            "featureType": "road.highway",
-                            "stylers": [{
-                                "saturation": -5
-                            }, {
-                                "visibility": "off"
-                            }]
-                        }, {
-                            "featureType": "road.highway",
-                            "elementType": "geometry",
-                            "stylers": [{
-                                "color": "#dadada"
-                            }]
-                        }, {
-                            "featureType": "road.highway",
-                            "elementType": "labels.text.fill",
-                            "stylers": [{
-                                "color": "#616161"
-                            }]
-                        }, {
-                            "featureType": "road.local",
-                            "elementType": "labels.text.fill",
-                            "stylers": [{
-                                "color": "#9e9e9e"
-                            }]
-                        }, {
-                            "featureType": "transit.line",
-                            "elementType": "geometry",
-                            "stylers": [{
-                                "color": "#e5e5e5"
-                            }]
-                        }, {
-                            "featureType": "transit.station",
-                            "elementType": "geometry",
-                            "stylers": [{
-                                "color": "#eeeeee"
-                            }]
-                        }, {
-                            "featureType": "water",
-                            "elementType": "geometry",
-                            "stylers": [{
-                                "color": "#c9c9c9"
-                            }]
-                        }, {
-                            "featureType": "water",
-                            "elementType": "labels.text.fill",
-                            "stylers": [{
-                                "color": "#9e9e9e"
-                            }]
-                        }]
-                    };
+                            var myOptions = {
+                                        zoom: 10,
+                                        center: suomi,
+                                        disableDefaultUI: true,
+                                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                        styles: [{
+                                            "stylers": [{
+                                                "saturation": 30
+                                            }, {
+                                                "lightness": 100
+                                            }]
+                                        }, {
+                                            "elementType": "geometry",
+                                            "stylers": [{
+                                                "color": "#f5f5f5"
+                                            }]
+                                        }, {
+                                            "elementType": "labels.icon",
+                                            "stylers": [{
+                                                "visibility": "off"
+                                            }]
+                                        }, {
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [{
+                                                "color": "#616161"
+                                            }]
+                                        }, {
+                                            "elementType": "labels.text.stroke",
+                                            "stylers": [{
+                                                "color": "#f5f5f5"
+                                            }]
+                                        }, {
+                                            "featureType": "administrative.land_parcel",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [{
+                                                "color": "#bdbdbd"
+                                            }]
+                                        }, {
+                                            "featureType": "landscape",
+                                            "stylers": [{
+                                                "color": "#bfbfbf"
+                                            }, {
+                                                "saturation": -5
+                                            }]
+                                        }, {
+                                            "featureType": "poi",
+                                            "elementType": "geometry",
+                                            "stylers": [{
+                                                "color": "#eeeeee"
+                                            }]
+                                        }, {
+                                            "featureType": "poi",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [{
+                                                "color": "#757575"
+                                            }]
+                                        }, {
+                                            "featureType": "poi.park",
+                                            "elementType": "geometry",
+                                            "stylers": [{
+                                                "color": "#dbdbdb"
+                                            }, {
+                                                "visibility": "simplified"
+                                            }]
+                                        }, {
+                                            "featureType": "poi.park",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [{
+                                                "color": "#9e9e9e"
+                                            }]
+                                        }, {
+                                            "featureType": "road",
+                                            "elementType": "geometry",
+                                            "stylers": [{
+                                                "color": "#ffffff"
+                                            }]
+                                        }, {
+                                            "featureType": "road.arterial",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [{
+                                                "color": "#757575"
+                                            }]
+                                        }, {
+                                            "featureType": "road.highway",
+                                            "stylers": [{
+                                                "saturation": -5
+                                            }, {
+                                                "visibility": "off"
+                                            }]
+                                        }, {
+                                            "featureType": "road.highway",
+                                            "elementType": "geometry",
+                                            "stylers": [{
+                                                "color": "#dadada"
+                                            }]
+                                        }, {
+                                            "featureType": "road.highway",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [{
+                                                "color": "#616161"
+                                            }]
+                                        }, {
+                                            "featureType": "road.local",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [{
+                                                "color": "#9e9e9e"
+                                            }]
+                                        }, {
+                                            "featureType": "transit.line",
+                                            "elementType": "geometry",
+                                            "stylers": [{
+                                                "color": "#e5e5e5"
+                                            }]
+                                        }, {
+                                            "featureType": "transit.station",
+                                            "elementType": "geometry",
+                                            "stylers": [{
+                                                "color": "#eeeeee"
+                                            }]
+                                        }, {
+                                            "featureType": "water",
+                                            "elementType": "geometry",
+                                            "stylers": [{
+                                                "color": "#c9c9c9"
+                                            }]
+                                        }, {
+                                            "featureType": "water",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [{
+                                                "color": "#9e9e9e"
+                                            }]
+                                        }]
+                                    };
                                 
                                 <?php
                     
-                    //tää $testi hakee kaikki ne postit missä on lisäkentttänä noi displayt monelemmat ja näyttää molemmat arvot 
+                            //tää $testi hakee kaikki ne postit missä on lisäkentttänä noi displayt monelemmat ja näyttää molemmat arvot 
                             $query = array();
                             $the_query = new WP_Query( array(
 
@@ -194,7 +187,7 @@
                                          ),) );
 
                     
-                         //tää hakee jotenkin ihmeellisesti noi jutut
+                            //tää hakee jotenkin ihmeellisesti noi jutut
                                 echo "var koordinaatit = [";
                                 $comma= "";
                                 while ( $the_query->have_posts() ) {
@@ -206,33 +199,40 @@
                                 }
                                 echo "];\n\n";
                            
-                            ?>
-        
-                   
-                  
-                    
-
-                      map = new google.maps.Map(document.getElementById('map'), myOptions);
+                                ?>
                                 
-                        var infowindow = new google.maps.InfoWindow();
+                                for(i = 0; i < koordinaatit.length; i++){
+                                    console.log(koordinaatit[i])
+                                }
+        
+                        map = new google.maps.Map(document.getElementById('map'), myOptions);
+                        
+                                
 
                         var marker, i;
                         
                         /*tää juttu hakee tolla loopilla postien koordinaatit ja jotenkin ihmeellisesti onnistuu näyttää ne kartalla */
                                 
                         for (i = 0; i < koordinaatit.length; i++) {  
-                        marker = new google.maps.Marker({
-                        position: new google.maps.LatLng(koordinaatit[i][1], koordinaatit[i][2]),
-                        map: map
+                            marker = new google.maps.Marker({
+                                position: new google.maps.LatLng(koordinaatit[i][1], koordinaatit[i][2]),
+                                map: map
                         });
-
+                              
+                        
+                            
                         google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                            
                         return function() {
-                        infowindow.setContent(koordinaatit[i][0]);
-                        infowindow.open(map, marker);
+                        console.log('tänne tulee se mitä haluut et tapahtuu ku sitä painetaan')
+                        //tässä pitäis olla se linkki mikä tajuu et mikä artikkeli on kyseessä ku painetaa markkerii ja vie sut sit sinne
+                        window.location.replace('<?php echo get_permalink() ?>');
+                            
                         }
                         })(marker, i));
-                        };        
+                        };  
+                                
+                       
                             
                     }; 
                      
