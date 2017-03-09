@@ -9,37 +9,10 @@
                     <div id="map"></div>
         
                     
-                     <?php
-                    
-                    //tää $testi hakee kaikki ne postit missä on lisäkentttänä noi displayt monelemmat ja näyttää molemmat arvot 
-    
-                $the_query = new WP_Query( array(
-                        'meta_query' => array(
-                        'relation' => 'AND' 
-                        ),
-                        array(
-                        'key' => 'metadisplayLat',
-                        ),
-                        array(
-                        'key' => 'metadisplayLong',
-                             ),) );
-                    if ( $the_query->have_posts() ) {
-                        while ( $the_query->have_posts() ) {
-                            $the_query->the_post();
-                            echo get_the_title();
-                            echo get_post_meta(get_the_ID(), 'metadisplayLat', true);
-                            echo get_post_meta(get_the_ID(), 'metadisplayLong', true);
-                            
-                        }
-                    } else {
-                        // no posts found
-                    }
-                   
-                    wp_reset_postdata();
-                    
+                     
                     
            
-            /*    ei toimi tän kanssa toi $testi vaa tää on se mitä ilen ohjeessa oli, en vaan ymmärrä miten noi pilkut tuolla ja pisteet menee ku toi herjaa 
+            <!--   ei toimi tän kanssa toi $testi vaa tää on se mitä ilen ohjeessa oli, en vaan ymmärrä miten noi pilkut tuolla ja pisteet menee ku toi herjaa 
             
                     $the_query = new WP_Query( array() );
                     if ( $the_query->have_posts() ) {
@@ -56,16 +29,17 @@
                     }
                    
                     wp_reset_postdata();*/
-                                    ?>
+                                    ?> -->
                         <script>
                             
                             
                         var map;
-                        //var marker;
+                        var marker;
+                        var infowindow;
                             //näyttää kartan sivulla
                             function initMap() {
                             var suomi = {lat: 60.230635, lng: 25.404319};
-                            var myLatLng = {lat: 60.230635, lng: 25.404319};
+                           
 
                                 
                            
@@ -202,22 +176,66 @@
                             }]
                         }]
                     };
+                                
+                                <?php
+                    
+                    //tää $testi hakee kaikki ne postit missä on lisäkentttänä noi displayt monelemmat ja näyttää molemmat arvot 
+                            $query = array();
+                            $the_query = new WP_Query( array(
+
+                                    'meta_query' => array(
+                                    'relation' => 'AND' 
+                                    ),
+                                    array(
+                                    'key' => 'metadisplayLat',
+                                    ),
+                                    array(
+                                    'key' => 'metadisplayLong',
+                                         ),) );
+
+                    
+                         //tää hakee jotenkin ihmeellisesti noi jutut
+                                echo "var koordinaatit = [";
+                                $comma= "";
+                                while ( $the_query->have_posts() ) {
+                                $the_query->the_post();
+                                $title = str_replace("'", "\'", get_the_title());
+                                echo $comma . "['" . $title . "', '" . get_post_meta( get_the_ID(), 'metadisplayLat', true ) . "', '" . get_post_meta( get_the_ID(), 'metadisplayLong', true ) . "', " . get_the_id() . "]";
+
+                                $comma = ", ";
+                                }
+                                echo "];\n\n";
+                           
+                            ?>
+        
+                   
+                  
+                    
 
                       map = new google.maps.Map(document.getElementById('map'), myOptions);
                                 
-                            
-                    };
-                            //testaan vaan et saanko ees yhtä markkerii näkyviin vaan et määrittelen sen sijainnin, ei onnistunu
-                            var marker = new google.maps.Marker({
-                            position: myLatLng,
-                            map: map,
-                        
-  });
-                            
-                            marker.setMap(map);
+                        var infowindow = new google.maps.InfoWindow();
 
+                        var marker, i;
+                        
+                        /*tää juttu hakee tolla loopilla postien koordinaatit ja jotenkin ihmeellisesti onnistuu näyttää ne kartalla */
                                 
-                   
+                        for (i = 0; i < koordinaatit.length; i++) {  
+                        marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(koordinaatit[i][1], koordinaatit[i][2]),
+                        map: map
+                        });
+
+                        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                        return function() {
+                        infowindow.setContent(koordinaatit[i][0]);
+                        infowindow.open(map, marker);
+                        }
+                        })(marker, i));
+                        };        
+                            
+                    }; 
+                     
                         </script>
                     
                     
