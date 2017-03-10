@@ -78,7 +78,7 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                         <h3 class="page-exrpt">Klikkaa kartalle ja lisää tiedosto.</h3>
  
 <!--SUBMIT POST-->
-                    <div id="map"></div>
+                    <div id="map_lisays"></div>
                     
                     
                         <form id="new_post" name="new_post" class="post_work" method="post" enctype="multipart/form-data">
@@ -245,7 +245,7 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
                         }]
                     };
 
-                      map = new google.maps.Map(document.getElementById('map'), myOptions);          
+                      map = new google.maps.Map(document.getElementById('map_lisays'), myOptions);          
       
           
                                 //lisää paikkatiedon formiin, piilotettuihin inputteihin.

@@ -2,6 +2,7 @@
 
 
 <?php get_header(); ?>
+<div id="container">
 <div class="content-row">
     <main>
        
@@ -21,7 +22,7 @@
         <?php endforeach; ?>
     </main>
 </div>
-    
+</div>    
 <?php
 get_footer();
 ?>

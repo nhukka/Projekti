@@ -86,5 +86,6 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
             </div>
             
 </div>  
+</div>
     
     <?php get_footer();?>

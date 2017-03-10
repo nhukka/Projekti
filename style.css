@@ -474,8 +474,13 @@ border-bottom: 20px solid #C4C4C4;
 }
 
 
-#map{
+#map_lisays{
     height: 300px;
+    width: 100%;
+}
+
+#map{
+    height: 700px;
     width: 100%;
 }
 
@@ -513,7 +518,7 @@ article h4{
 
 
 footer{
-    position: absolute;
+    float: left;
     width: 100%;
     height: 40px;
     color: #FFF;
@@ -541,6 +546,12 @@ footer{
 @media screen and (min-width: 641px) and (max-width: 999px){
     article{
         width: 50%;
+    }
+}
+
+@media screen and (min-width: 1300px){
+    article{
+        width: 25%;
     }
 }
 
