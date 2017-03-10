@@ -228,6 +228,10 @@ border-bottom: 20px solid #C4C4C4;
     position: relative;
 }
 
+.hel:hover{
+     color: #E58195;
+}
+
 .helback{
      color: #E58195;
 }
@@ -340,6 +344,10 @@ border-right: 20px solid #C4C4C4;
     
 }
 
+.esp:hover{
+     color: #FAC296;
+}
+
 .espback{
     color: #FAC296;
 }
@@ -437,6 +445,10 @@ border-bottom: 20px solid #C4C4C4;
     position: relative;
     
 }
+
+.van:hover{
+     color: #89FFD4;
+}
 .vanback{
     color: #89FFD4;
 }
@@ -467,6 +479,39 @@ border-bottom: 20px solid #C4C4C4;
     width: 100%;
 }
 
+article{
+    width: 33.33%;
+    float: left;
+    height: 320px;
+}
+
+article a{
+    display: block;
+    max-width: 306px;
+    padding: 3px;
+    margin: auto;
+    text-decoration: none;
+    color: inherit;
+}
+
+article a:hover{
+
+}
+
+article-img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+article h4{
+    font-weight: normal;
+    margin: 0.2em 0;
+    padding: 0 0.2em;
+}
+
+
 footer{
     position: absolute;
     width: 100%;
@@ -491,6 +536,12 @@ footer{
     }
     
 
+}
+
+@media screen and (min-width: 641px) and (max-width: 999px){
+    article{
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 640px){
@@ -522,6 +573,10 @@ footer{
         .van{
     font-size: 180px;
 }
+    
+    article{
+        width: 100%;
+    }
     
 }
 /*sitä varten et tekstit istuis paremmin kännykkäversiossa*/
