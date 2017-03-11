@@ -31,30 +31,43 @@ jQuery(function() {
 
 
     jQuery(".h_vasen").click(function() {
-        jQuery(".hpiilo ul a img").animate({
-            left:'+=100px'
+        jQuery(".hpiilo ul a").animate({
+            left:'+=300px'
         });
        
     });
      jQuery(".h_oikea").click(function() {
-        jQuery(".hpiilo ul a img").animate({
-            left:'-=100px'
+        jQuery(".hpiilo ul a").animate({
+            left:'-=300px'
         });
        
     });
     
     jQuery(".e_vasen").click(function() {
-        jQuery(".epiilo ul a img").animate({
-            left:'+=100px'
+        jQuery(".epiilo ul a").animate({
+            left:'+=300px'
         });
        
     });
      jQuery(".e_oikea").click(function() {
-        jQuery(".epiilo ul a img").animate({
-            left:'-=100px'
+        jQuery(".epiilo ul a").animate({
+            left:'-=300px'
         });
        
     });
+    jQuery(".v_vasen").click(function() {
+        jQuery(".vpiilo ul a").animate({
+            left:'+=300px'
+        });
+       
+    });
+     jQuery(".v_oikea").click(function() {
+        jQuery(".vpiilo ul a").animate({
+            left:'-=300px'
+        });
+       
+    });
+    
     
      //tää on valikon responsiiviuus
     var menuLink = jQuery('.menu-item').first();

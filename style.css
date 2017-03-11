@@ -247,24 +247,22 @@ border-bottom: 20px solid #C4C4C4;
 
 .hpiilo ul{
     display: flex !important;
+    
     list-style-type: none; 
     overflow: hidden;
+      
 }
 
 .hpiilo ul a{
     display: block;
-    
+    position: relative;
 }
-
-
 
 .hpiilo ul a img{
     position: relative;
-    
     margin-top: 5em;
     margin-left: 2em;
-    margin-right: 2em;
-   
+    margin-right: 2em; 
 }
 
 /*ESPOO*/
@@ -360,15 +358,23 @@ border-right: 20px solid #C4C4C4;
 }
 
 .epiilo ul{
-    display: flex;
+    display: flex !important;
+    
     list-style-type: none; 
     overflow: hidden;
+      
 }
 
-.epiilo ul li img{
-    max-height: 20em;
-    max-width: 20em;
-    margin: 6em 1em 1em 1em;
+.epiilo ul a{
+    display: block;
+    position: relative;
+}
+
+.epiilo ul a img{
+    position: relative;
+    margin-top: 5em;
+    margin-left: 2em;
+    margin-right: 2em; 
 }
 
 /*VANTAA*/
@@ -462,15 +468,23 @@ border-bottom: 20px solid #C4C4C4;
 }
 
 .vpiilo ul{
-    display: flex;
+    display: flex !important;
+    
     list-style-type: none; 
     overflow: hidden;
+      
 }
 
-.vpiilo ul li img{
-    max-height: 20em;
-    max-width: 20em;
-    margin: 6em 1em 1em 1em;
+.vpiilo ul a{
+    display: block;
+    position: relative;
+}
+
+.vpiilo ul a img{
+    position: relative;
+    margin-top: 5em;
+    margin-left: 2em;
+    margin-right: 2em; 
 }
 
 
