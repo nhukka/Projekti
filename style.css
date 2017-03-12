@@ -694,34 +694,6 @@ img {
         width: 100%;
     }
     
-    .h_vasen{
-    top: 450px;
-    width: 40px;
-    height: 40px;
-    border-bottom: 10px solid #FFF;
-    border-left: 10px solid #FFF;
-    }
-    .h_vasen:hover{
-    
-    border-bottom: 10px solid #C4C4C4;
-    border-left: 10px solid #C4C4C4;
-    }
-    
-     .h_oikea{
-    top: 450px;
-    width: 40px;
-    height: 40px;
-    border-right: 10px solid #FFF;
-    border-top: 10px solid #FFF;
-    
-    }
-    
-     .h_oikea:hover{
-    
-    border-right: 10px solid #C4C4C4;
-    border-top: 10px solid #C4C4C4;
-    
-    }
     
     
 }
@@ -737,7 +709,7 @@ img {
     font-size: 90px;
     }
     .hpiilo{
-        height: 19em;    
+        height: 20em;    
     }
     .hpiilo ul a{
     margin-top: 1em;
@@ -749,7 +721,7 @@ img {
     max-width: 200px
     }
     .epiilo{
-        height: 19em;    
+        height: 20em;    
     }
     .epiilo ul a{
     margin-top: 1em;
@@ -761,7 +733,7 @@ img {
     max-width: 200px
     }
     .vpiilo{
-        height: 19em;    
+        height: 20em;    
     }
     .vpiilo ul a{
     margin-top: 1em;
