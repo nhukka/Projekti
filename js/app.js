@@ -32,12 +32,12 @@ jQuery(function() {
 
     jQuery(".h_vasen").click(function() {
         jQuery(".hpiilo ul a").animate({
-            left:'-=300px'
+            left:'+=300px'
         });  
     });
      jQuery(".h_oikea").click(function() {
         jQuery(".hpiilo ul a").animate({
-            left:'+=300px'
+            left:'-=300px'
         });   
     });
     

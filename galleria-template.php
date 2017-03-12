@@ -21,21 +21,23 @@
         </article>
   <div id="myModal-<? the_ID(); ?>" class="modal fade" role="dialog">
          <div class="modal-dialog modal-lg">
-      <div class ="row">
-          <div class="col-10"><h3><?php the_title();?></h3></div>
-          <div class="col-2"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-             </div>
              <div class ="row">
-             
-          <div class="col-12">
-          <?php echo get_the_post_thumbnail(); ?></div>
-       
-      
-      
-          <div class="col-12"> <?php echo get_the_tag_list();?></div></div>
-     
+                 <div class="col-12" id="sulku"><button type="button" class="close" data-dismiss="modal">&#215;</button></div>
+                 </div>
+        <div class ="row">
+        <div class="col-12">
+            <h3><?php the_title();?></h3>
+        </div>
+        </div>     
+        <div class ="row">     
+        <div class="col-12">
+             <?php echo get_the_post_thumbnail(); ?>
+        </div>
+        <div class="col-12"> 
+            <?php echo get_the_tag_list();?></div>
+        </div>
+     </div>
     </div>
-         </div>
             <?php
                         }
                        

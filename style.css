@@ -247,10 +247,9 @@ border-bottom: 20px solid #C4C4C4;
 
 .hpiilo ul{
     display: flex !important;
-    
     list-style-type: none; 
     overflow: hidden;
-      
+    padding: 0;       
 }
 
 .hpiilo ul a{
@@ -265,6 +264,7 @@ border-bottom: 20px solid #C4C4C4;
 
 .hpiilo ul a img{
     position: relative;  
+    min-width: 300px;
 }
 .hpiilo ul a:hover{
     background-color: #E58195; 
@@ -369,10 +369,9 @@ border-right: 20px solid #C4C4C4;
 
 .epiilo ul{
     display: flex !important;
-    
     list-style-type: none; 
     overflow: hidden;
-      
+    padding: 0;  
 }
 
 .epiilo ul a{
@@ -386,7 +385,8 @@ border-right: 20px solid #C4C4C4;
 }
 
 .epiilo ul a img{
-    position: relative;  
+    position: relative; 
+    min-width: 300px;
 }
 .epiilo ul a:hover{
     background-color: #FAC296; 
@@ -490,10 +490,9 @@ border-bottom: 20px solid #C4C4C4;
 
 .vpiilo ul{
     display: flex !important;
-    
     list-style-type: none; 
     overflow: hidden;
-      
+    padding: 0;   
 }
 
 .vpiilo ul a{
@@ -507,7 +506,8 @@ border-bottom: 20px solid #C4C4C4;
 }
 
 .vpiilo ul a img{
-    position: relative;  
+    position: relative; 
+    min-width: 300px;
 }
 .vpiilo ul a:hover{
     background-color: #89FFD4; 
@@ -575,12 +575,13 @@ footer{
 div.modal-dialog{
     background: rgb(0, 0, 0); /* fallback color for non supportive browsers */
     background: rgba(0, 0, 0, 0.6);
+    font-family: 'Overpass Mono', monospace;
 }
 
 
 
 h3{
-    padding-top: 1em;
+    padding-top: 0;
     padding-bottom: 1em;
     text-align: center;
     margin: 0;
@@ -593,23 +594,43 @@ div.col-2{
 }
 
 button.close{
-    padding-bottom: 1em;
     padding-right: 1em;
     margin: 0;
+    outline-style: none;
+    color: #FFF;
+    opacity: 1;
 }
 
 div.col-12{
-    padding-top: 1em;
-    padding-bottom: 1em;
     margin: 0;
     text-align: center;
     display: inline-block;
+    
+}
+
+div.col-12 a{
+    padding: 1em;
+    margin: 0;
+    pointer-events: none;
+    cursor: default;
+    color: #FFF; 
+    
+    
 }
 
 img {
   display: inline-block;
   height: auto;
   max-width: 100%;
+}
+.gm-style-iw {
+    height: 100px;
+    width: 300px;
+}
+
+.gm-style img {
+    max-width: 200px;
+    
 }
 
 /* responsiivisuus */
@@ -676,19 +697,49 @@ img {
 @media screen and (max-width: 400px){
        .hel{
     font-size: 90px;
-}
+    }
      .esp{
     font-size: 90px;
-}
+    }
      .van{
     font-size: 90px;
-}
-    .hpiilo{
-        height:
-            15em;
-        
     }
-    
+    .hpiilo{
+        height: 15em;    
+    }
+    .hpiilo ul a{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em; 
+    }
+    .hpiilo ul a img{ 
+    min-width: 200px;
+    max-width: 200px
+    }
+    .epiilo{
+        height: 15em;    
+    }
+    .epiilo ul a{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em; 
+    }
+    .epiilo ul a img{ 
+    min-width: 200px;
+    max-width: 200px
+    }
+    .vpiilo{
+        height: 15em;    
+    }
+    .vpiilo ul a{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em; 
+    }
+    .vpiilo ul a img{ 
+    min-width: 200px;
+    max-width: 200px;
+    }
    
 }
 
