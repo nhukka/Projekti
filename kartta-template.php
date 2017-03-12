@@ -7,6 +7,24 @@
                 <div id="content" role="main">
  
                     <div id="map"></div>
+                    
+                    <div id="myModal-<? the_ID(); ?>" class="modal fade" role="dialog">
+         <div class="modal-dialog modal-lg">
+      <div class ="row">
+          <div class="col-10"><h3><?php the_title();?></h3></div>
+          <div class="col-2"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+             </div>
+             <div class ="row">
+             
+          <div class="col-12">
+          <?php echo get_the_post_thumbnail(); ?></div>
+       
+      
+      
+          <div class="col-12"> <?php echo get_the_tag_list();?></div></div>
+     
+    </div>
+         </div>
         
             <!--   ei toimi tän kanssa toi $testi vaa tää on se mitä ilen ohjeessa oli, en vaan ymmärrä miten noi pilkut tuolla ja pisteet menee ku toi herjaa 
             
@@ -216,17 +234,23 @@
                         for (i = 0; i < koordinaatit.length; i++) {  
                             marker = new google.maps.Marker({
                                 position: new google.maps.LatLng(koordinaatit[i][1], koordinaatit[i][2]),
-                                map: map
+                                map: map,
+                                icon: {
+                                    path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+                                    scale: 5
+                                }
                         });
                               
                         
-                            
+                        
                         google.maps.event.addListener(marker, 'click', (function(marker, i) {
                             
                         return function() {
                         console.log('tänne tulee se mitä haluut et tapahtuu ku sitä painetaan')
                         //tässä pitäis olla se linkki mikä tajuu et mikä artikkeli on kyseessä ku painetaa markkerii ja vie sut sit sinne
-                        window.location.replace('<?php echo get_permalink() ?>');
+                        google.maps.event.addListener(marker, 'click', function() {
+		                  jQuery('#myModal-<? the_ID(); ?>').modal('show')
+                        });
                             
                         }
                         })(marker, i));

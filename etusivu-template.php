@@ -27,12 +27,11 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
                         while ( $the_query->have_posts() ) {
                             $the_query->the_post();?>
             <ul>
-             
               <a href="#myModal-<? the_ID(); ?>" data-toggle="modal" > 
              <?php echo get_the_post_thumbnail($artikkeli->ID, 'thumbnail'); ?>  </a>
                 
                 <div id="myModal-<? the_ID(); ?>" class="modal fade" role="dialog">
-         <div class="modal-dialog">
+         <div class="modal-dialog modal-lg">
       <div class ="row">
           <div class="col-10"><h3><?php the_title();?></h3></div>
           <div class="col-2"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
@@ -40,7 +39,8 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
              <div class ="row">
              
           <div class="col-12">
-          <?php echo get_the_post_thumbnail(); ?></div>
+              <img src="<?php echo get_the_post_thumbnail(); ?>">
+        </div>
        
       
       
@@ -48,7 +48,9 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
      
     </div>
          </div>
+    
                 <?php
+
                         }
                        
                     }
@@ -81,7 +83,7 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
              <?php echo get_the_post_thumbnail($artikkeli->ID, 'thumbnail'); ?>  </a>
                 
                 <div id="myModal-<? the_ID(); ?>" class="modal fade" role="dialog">
-         <div class="modal-dialog">
+         <div class="modal-dialog modal-lg">
       <div class ="row">
           <div class="col-10"><h3><?php the_title();?></h3></div>
           <div class="col-2"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
@@ -130,7 +132,7 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
              <?php echo get_the_post_thumbnail($artikkeli->ID, 'thumbnail'); ?>  </a>
                 
                 <div id="myModal-<? the_ID(); ?>" class="modal fade" role="dialog">
-         <div class="modal-dialog">
+         <div class="modal-dialog modal-lg">
       <div class ="row">
           <div class="col-10"><h3><?php the_title();?></h3></div>
           <div class="col-2"><button type="button" class="close" data-dismiss="modal">&times;</button></div>

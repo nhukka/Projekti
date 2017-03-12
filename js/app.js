@@ -31,14 +31,20 @@ jQuery(function() {
 
 
     jQuery(".h_vasen").click(function() {
-        jQuery(".hpiilo ul a").animate({
-            left:'+=300px'
+        jQuery(".hpiilo ul img").animate({
+            left:'-=100px'
+        });
+         jQuery(".hpiilo ul a").animate({
+            left:'-=100px'
         });
        
     });
      jQuery(".h_oikea").click(function() {
-        jQuery(".hpiilo ul a").animate({
-            left:'-=300px'
+        jQuery(".hpiilo ul img").animate({
+            left:'+=100px'
+        });
+           jQuery(".hpiilo ul a").animate({
+            left:'+=100px'
         });
        
     });
