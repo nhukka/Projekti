@@ -217,6 +217,8 @@
                         var marker, i;
                         var infowindow = new google.maps.InfoWindow({ maxWidth: 300 });
                                 
+                        
+                                
                                 
                         google.maps.event.addListener(map, 'click', function() {
                             infowindow.close();
