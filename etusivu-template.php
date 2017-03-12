@@ -14,6 +14,8 @@
 
 
 BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE. TEKSTIÄ UUDELLEEN KLIKATTAESSA BUTTONIT KATOAA VASTA, KUN DIV ON MENNYT PIILOON, TÄÄ PITÄÄ FIXATA-->  
+            
+            <ul>
             <?php
                 
                 //MUISTA VAIHTAA SUN OMAT ID NOIHIN ET TOIMII SULLA
@@ -26,7 +28,7 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
                        
                         while ( $the_query->have_posts() ) {
                             $the_query->the_post();?>
-            <ul>
+            
               <a href="#myModal-<? the_ID(); ?>" data-toggle="modal" > 
              <?php echo get_the_post_thumbnail($artikkeli->ID, 'thumbnail'); ?>  </a>
                 
@@ -65,6 +67,7 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
         
         <h1 class="esp">ESPOO</h1>
             <div class="epiilo">
+                <ul>
                 <?php
                 
                 //MUISTA VAIHTAA SUN OMAT ID NOIHIN ET TOIMII SULLA
@@ -77,7 +80,7 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
                        
                         while ( $the_query->have_posts() ) {
                             $the_query->the_post();?>
-            <ul>
+            
              
               <a href="#myModal-<? the_ID(); ?>" data-toggle="modal" > 
              <?php echo get_the_post_thumbnail($artikkeli->ID, 'thumbnail'); ?>  </a>
@@ -114,6 +117,7 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
         
         <h1 class="van">VANTAA</h1>    
             <div class="vpiilo">
+                <ul>
        <?php
                 
                 //MUISTA VAIHTAA SUN OMAT ID NOIHIN ET TOIMII SULLA
@@ -126,7 +130,7 @@ BUTTONIT EI TOGGLAA DIVIN MUKANA, VAAN HETI TEKSTIÄ KLIKATTUA LATAUTUU RUUDULLE
                        
                         while ( $the_query->have_posts() ) {
                             $the_query->the_post();?>
-            <ul>
+            
              
               <a href="#myModal-<? the_ID(); ?>" data-toggle="modal" > 
              <?php echo get_the_post_thumbnail($artikkeli->ID, 'thumbnail'); ?>  </a>

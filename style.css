@@ -256,13 +256,22 @@ border-bottom: 20px solid #C4C4C4;
 .hpiilo ul a{
     display: block;
     position: relative;
-}
-
-.hpiilo ul a img{
-    position: relative;
+    outline-style: none;
     margin-top: 5em;
     margin-left: 2em;
     margin-right: 2em; 
+    
+}
+
+.hpiilo ul a img{
+    position: relative;  
+}
+.hpiilo ul a:hover{
+    background-color: #E58195; 
+}
+
+.hpiilo ul a img:hover{
+    opacity: 0.5;
     
 }
 
@@ -369,14 +378,25 @@ border-right: 20px solid #C4C4C4;
 .epiilo ul a{
     display: block;
     position: relative;
-}
-
-.epiilo ul a img{
-    position: relative;
+    outline-style: none;
     margin-top: 5em;
     margin-left: 2em;
     margin-right: 2em; 
+    
 }
+
+.epiilo ul a img{
+    position: relative;  
+}
+.epiilo ul a:hover{
+    background-color: #FAC296; 
+}
+
+.epiilo ul a img:hover{
+    opacity: 0.5;
+    
+}
+
 
 /*VANTAA*/
 .v_oikea{
@@ -479,13 +499,23 @@ border-bottom: 20px solid #C4C4C4;
 .vpiilo ul a{
     display: block;
     position: relative;
-}
-
-.vpiilo ul a img{
-    position: relative;
+    outline-style: none;
     margin-top: 5em;
     margin-left: 2em;
     margin-right: 2em; 
+    
+}
+
+.vpiilo ul a img{
+    position: relative;  
+}
+.vpiilo ul a:hover{
+    background-color: #89FFD4; 
+}
+
+.vpiilo ul a img:hover{
+    opacity: 0.5;
+    
 }
 
 
@@ -503,32 +533,41 @@ article{
     width: 33.33%;
     float: left;
     height: 320px;
+    padding-top: 1em;
 }
 
 article a{
     display: block;
-    max-width: 306px;
-    padding: 3px;
+    max-width: 300px;
+    padding: ;
     margin: auto;
     text-decoration: none;
     color: inherit;
+    outline-style: none;
 }
 
 article a:hover{
-
+    background-color: #89FFD4; 
 }
 
-article-img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
+article a img:hover{
+    opacity: 0.5;
+    
 }
 
-article h4{
-    font-weight: normal;
-    margin: 0.2em 0;
-    padding: 0 0.2em;
+
+article a img:after {
+    content: '';
+    position: absolute;
+    width: 100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+article a img:hover:after {
+    opacity: 1;
 }
 
 
